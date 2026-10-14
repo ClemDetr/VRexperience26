@@ -10,6 +10,7 @@
     <a-assets>
         <img id="brick_bump" src="assets/brick_bump.jpg">
         <img id="sky_texture" src="assets/sky.jpg">
+        <audio id="car" src="assets/car.mp3"></audio>
     </a-assets>
   <a-scene>
     <a-entity animation="
@@ -20,6 +21,7 @@
     loop: true; 
     easing:easeOutQuad;
     " 
+    sound="src: #car"
     position="0 0.4 -60">
       <a-box position="0 0.1 0" color="#d21e1e" scale="2 0.7 5" material="metalness: 0.5; roughness: 0.5">
         <a-box position="0 0.85 0" color="#d21e1e" scale="0.95 0.7 0.6" material="metalness: 0.5; roughness: 0.5"></a-box>
