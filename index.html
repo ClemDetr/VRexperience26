@@ -13,7 +13,12 @@
         <img id="sky_texture" src="assets/sky.jpg">
         <audio id="car" src="assets/driving_car.mp3"></audio>
         <a-asset-item id="well_model" src="assets/well.glb"> </a-asset-item>
+        <a-asset-item id="glasshouse" src="assets/VRexp26.glb"></a-asset-item>
     </a-assets>
+
+    <camera>
+      <a-cursor material="color: white; opacity: 0.2"></a-cursor>
+    </camera>
     <a-entity id="red_car" animation="
     property: 
     position; 
@@ -50,11 +55,14 @@
       
     </a-entity> 
 
-    <a-entity gltf-model="#well_model" position="0 0 10" animation="property: rotation; to: 0 360 0; dur: 5000; loop: true;"></a-entity>
+    <a-entity id="well" gltf-model="#well_model" position="0 0 14" animation="property: rotation; to: 0 360 0; dur: 5000; loop: true; easing:linear;"></a-entity>
+    <a-entity id="glasshouse" gltf-model="assets/VRexp26.glb" position="0 0 -20" rotation="0 90 0" solid="true" anchored="persistent: true"></a-entity>
 
       <a-plane position="0 0 -8" rotation="-90 90 0" width="9" height="120" color="grey"></a-plane>
-      <a-sky src="#sky_texture"></a-sky>
-      <a-entity id="light" light="intensity: 5.38; type: ambient" position="0 6.902 0"></a-entity>
+      <a-sky src="assets/sky.jpg"></a-sky>
+
+      <a-entity id="light" light="color: #a2a5a1; intensity: 5.38; type: ambient" position="0 6.902 0"></a-entity>
+      <a-entity light="color: #c36628; decay: 0.54; intensity: 50; penumbra: 0.68; type: spot; castShadow: true; target: #well" id="spot1-2" position="-2.635 3.181 9.98"></a-entity>
   </a-scene>
   
 </body>
