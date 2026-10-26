@@ -19,50 +19,70 @@
     <camera>
       <a-cursor material="color: white; opacity: 0.2"></a-cursor>
     </camera>
-    <a-entity id="red_car" animation="
-    property: 
-    position; 
-    to: 60 0.4 -5; 
+    <a-entity id="red_car" 
+    animation="
     dur: 10000; 
+    easing: easeOutQuad; 
     loop: true; 
-    easing:easeOutQuad;
-    " 
-    sound="src: #car; autoplay: true; loop: true; refDistance: 20; maxDistance: 100;"
+    property: 
+    position; to: 60 0.4 -5" 
+    sound="autoplay: true; loop: true; maxDistance: 100; refDistance: 20; src: #car" 
     position="-60 0.4 -5">
-      <a-box position="0 0.1 0" rotation="0 90 0" color="#d21e1e" scale="2 0.7 5" material="metalness: 0.5; roughness: 0.5">
-        <a-box position="0 0.85 0" rotation="0 90 0" color="#d21e1e" scale="0.95 0.7 0.6" material="metalness: 0.5; roughness: 0.5"></a-box>
+      <a-box position="0 0.2 0" rotation="0 90 0" color="#d21e1e" scale="2 0.7 5" material="metalness: 0.5" geometry="depth: 0.97; height: 0.95">
+        <a-box position="0 0.85 0" rotation="0 90 0" color="#d21e1e" scale="0.95 0.7 0.6" material="metalness: 0.5" geometry="depth: 1.38; height: 1.31; width: 0.72"></a-box>
       </a-box>
-      <a-cylinder position="1 0 0" rotation="90 0 0" radius="0.3" height="2.1" color="gray"></a-cylinder>
-      <a-cylinder position="-1 0 0" rotation="90 0 0" radius="0.3" height="2.1" color="gray"></a-cylinder>
-      
-    </a-entity>  
+      <a-cylinder position="1 0 0" rotation="90 0 0" radius="0.3" height="2.1" color="#1f1e1e"></a-cylinder>
+      <a-cylinder position="-1 0 0" rotation="90 0 0" radius="0.3" height="2.1" color="#1f1e1e"></a-cylinder>
+      <a-cylinder position="2.004 0.098 -0.653" rotation="0 0 90" radius="0.3" height="1" color="yellow" scale="0.529 1 0.838">
+        <a-light type="spot" color="yellow" intensity="5" distance="10" decay="2" position="-0.005 -0.262 0.019" light="angle: 40; decay: 1.04; distance: 9.34; intensity: 15; penumbra: 0.36" rotation="-84.45397900228335 -30.882425157551374 -148.96902673401405"></a-light>
+      </a-cylinder>
+      <a-cylinder position="2.004 0.098 0.649" rotation="0 0 90" radius="0.3" height="1" color="yellow" scale="0.529 1 0.838">
+        <a-light type="spot" color="yellow" intensity="5" distance="10" decay="2" position="-0.005 -0.262 0.019" light="angle: 40; decay: 1.04; distance: 9.34; intensity: 15; penumbra: 0.36" rotation="-84.45397900228335 -30.882425157551374 -148.96902673401405"></a-light>
+      </a-cylinder>
+      <a-cylinder position="-2.381 0.252 0.727" rotation="0 0 90" radius="0.3" height="1" color="red" scale="0.445 0.223 0.366" material="color: red; emissive: #ee1b1b">
+        <a-light type="spot" color="red" intensity="5" distance="10" decay="2" position="-0.005 -0.262 0.019" light="angle: 90; color: red; decay: 0.53; distance: 2.42; intensity: 15; penumbra: 1" rotation="83.99561276617868 37.872510258147415 38.044397596686665"></a-light>
+      </a-cylinder>
+      <a-cylinder position="-2.381 0.252 -0.653" rotation="0 0 90" radius="0.3" height="1" color="red" scale="0.445 0.223 0.366" material="color: red; emissive: #ee1b1b">
+        <a-light type="spot" color="red" intensity="5" distance="10" decay="2" position="-0.005 -0.262 0.019" light="angle: 90; color: red; decay: 0.53; distance: 2.42; intensity: 15; penumbra: 1" rotation="83.99561276617868 37.872510258147415 38.044397596686665"></a-light>
+      </a-cylinder>
+    </a-entity>
 
-    <a-entity id="blue_car" animation="
-    property: 
-    position; 
-    to: -60 0.4 -10; 
+    <a-entity id="blue_car" 
+    animation="
     dur: 10000; 
+    easing: easeOutQuad; 
     loop: true; 
-    easing:easeOutQuad;
-    " 
-    sound="src: #car; autoplay: true; loop: true; refDistance: 20; maxDistance: 100;"
+    property: position; 
+    to: -60 0.4 -10" 
+    sound="autoplay: true; loop: true; maxDistance: 100; refDistance: 20; src: #car" 
     position="60 0.4 -10">
-      <a-box position="0 0.1 0" rotation="0 90 0" color="blue" scale="2 0.7 5" material="metalness: 0.5; roughness: 0.5">
-        <a-box position="0 0.85 0" rotation="0 90 0" color="blue" scale="0.95 0.7 0.6" material="metalness: 0.5; roughness: 0.5"></a-box>
+      <a-box position="0 0.191 0" rotation="0 90 0" color="blue" scale="2 0.7 3.905" material="metalness: 0.5">
+        <a-box position="0 0.85 0" rotation="0 90 0" color="blue" scale="0.652 0.7 0.831" material="metalness: 0.5"></a-box>
       </a-box>
-      <a-cylinder position="1 0 0" rotation="90 0 0" radius="0.3" height="2.1" color="gray"></a-cylinder>
-      <a-cylinder position="-1 0 0" rotation="90 0 0" radius="0.3" height="2.1" color="gray"></a-cylinder>
-      
-    </a-entity> 
+      <a-cylinder position="1 0 0" rotation="90 0 0" radius="0.3" height="2.1" color="#1f1e1e"></a-cylinder>
+      <a-cylinder position="-1 0 0" rotation="90 0 0" radius="0.3" height="2.1" color="#1f1e1e"></a-cylinder>
+      <a-cylinder position="-1.495 0.098 0.649" rotation="0 0 90" radius="0.3" height="1" color="yellow" scale="0.529 1 0.838">
+        <a-light type="spot" color="yellow" intensity="5" distance="10" decay="2" position="-0.005 0.361 0" light="angle: 40; decay: 1.04; distance: 9.34; intensity: 4.91; penumbra: 0.36" rotation="85.2561199154665 0 0"></a-light>
+      </a-cylinder>
+      <a-cylinder position="-1.488 0.098 -0.626" rotation="0 0 90" radius="0.3" height="1" color="yellow" scale="0.529 1 0.838">
+        <a-light type="spot" color="yellow" intensity="5" distance="10" decay="2" position="-0.005 0.361 0.019" light="angle: 40; decay: 1.04; distance: 9.34; intensity: 4.91; penumbra: 0.36" rotation="85.2561199154665 0 0"></a-light>
+      </a-cylinder>
+      <a-cylinder position="1.485 0.273 -0.681" rotation="0 0 90" radius="0.3" height="1" color="yellow" scale="0.513 1 0.392" material="color: red; emissive: #db2424">
+        <a-light type="spot" color="yellow" intensity="5" distance="10" decay="2" position="-0.005 -0.452 0.019" light="angle: 90; color: red; decay: 1.23; distance: 3.62; intensity: 15; penumbra: 1" rotation="-79.6984293026975 62.50969544877281 117.11257332474027"></a-light>
+      </a-cylinder>
+      <a-cylinder position="1.485 0.274 0.685" rotation="0 0 90" radius="0.3" height="1" color="yellow" scale="0.513 1 0.392" material="color: red; emissive: #db2424">
+        <a-light type="spot" color="yellow" intensity="5" distance="10" decay="2" position="-0.005 -0.452 0.019" light="angle: 90; color: red; decay: 1.23; distance: 3.62; intensity: 15; penumbra: 1" rotation="-79.6984293026975 62.50969544877281 117.11257332474027"></a-light>
+      </a-cylinder>
+    </a-entity>
 
     <a-entity id="well" gltf-model="#well_model" position="0 0 14" animation="property: rotation; to: 0 360 0; dur: 5000; loop: true; easing:linear;"></a-entity>
     <a-entity id="glasshouse" gltf-model="assets/VRexp26.glb" position="0 0 -20" rotation="0 90 0" solid="true" anchored="persistent: true"></a-entity>
 
-      <a-plane position="0 0 -8" rotation="-90 90 0" width="9" height="120" color="grey"></a-plane>
-      <a-sky src="assets/sky.jpg"></a-sky>
+    <a-plane position="0 0 -8" rotation="-90 90 0" width="9" height="120" color="grey"></a-plane>
+    <a-sky src="assets/sky.jpg"></a-sky>
 
-      <a-entity id="light" light="color: #a2a5a1; intensity: 5.38; type: ambient" position="0 6.902 0"></a-entity>
-      <a-entity light="color: #c36628; decay: 0.54; intensity: 50; penumbra: 0.68; type: spot; castShadow: true; target: #well" id="spot1-2" position="-2.635 3.181 9.98"></a-entity>
+    <a-entity id="light" light="color: #a2a5a1; intensity: 5.38; type: ambient" position="0 6.902 0"></a-entity>
+    <a-entity light="color: #c36628; decay: 0.54; intensity: 50; penumbra: 0.68; type: spot; castShadow: true; target: #well" id="spot1-2" position="-2.635 3.181 9.98"></a-entity>
   </a-scene>
   
 </body>
